@@ -4,5 +4,9 @@
     --white-color: #FFFFFF;
     --black-color: #000000;
     --gap: 30px;
-    --light-grey-color: 3rem;
+    --light-grey-color: #817979b6;
+    --react-color: #087EA4;
+    --react-dark-color: #05536d;
+    --grey-color: #2f2c2c;
+    --contact-bg-color: #06c1ff;
 }

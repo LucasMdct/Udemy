@@ -1,10 +1,9 @@
 .intro-content {
     position: relative;
-    top: -8rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;   
+    grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content {
@@ -13,26 +12,28 @@
     justify-content: center;
 }
 
-.intro-text-content h2{
+.intro-text-content h2 {
     font-size: 8rem;
     margin-bottom: 5rem;
     text-transform: uppercase;
     line-height: 1.2;
 }
+
 .intro-img {
     display: flex;
 }
-.intro-img img{
+
+.intro-img img {
     max-width: 100%;
     height: auto;
 }
 
-.top3-content {
+.grid3-content {
     max-width: 64rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -40,11 +41,12 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .grid-main-heading {
     margin-bottom: 1rem;
+    text-transform: capitalize;
 }
 
 .grid-description {
@@ -75,4 +77,90 @@
     top: -4rem;
     left: -2rem;
     transform: rotate(4deg);
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.price {
+    margin-top: 10rem;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.form-group{
+    flex: 1 1 32rem;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 1rem 0.2rem var(--black-color);
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    background: var(--react-dark-color);
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 3rem;
+    color: var(--white-color);
+    outline: none;
+}
+
+
+
+.form-group button {
+    border: 0.5rem solid var(--black-color);
+    padding: 1.5rem 2rem;
+    color: var(--white-color);
+    background-color: var(--react-dark-color);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    border: 0.5rem solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+.form-group ::placeholder {
+    color: var(--white-color);
 }

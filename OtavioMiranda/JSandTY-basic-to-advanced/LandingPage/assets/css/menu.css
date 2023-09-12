@@ -21,6 +21,11 @@
     font-size: 2.3rem;
     color: var(--primary-color);
   }
+    
+  .menu h1:hover {
+    color: var(--react-color);
+    transition: ease-in-out 600ms;
+  }
   
   .menu h1 a {
     color: inherit;
@@ -46,7 +51,7 @@
     left: 50%;
     width: 0;
     height: 0.2rem;
-    background: crimson;
+    background: var(--react-color);
     transition: all 300ms ease-in-out;
   }
   
@@ -54,3 +59,34 @@
     width: 50%;
     left: 25%;
   }
+
+  .location-button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: -2rem;
+    align-items: center;
+}
+
+.location-button .button {
+    margin-right: 10rem;
+    padding-top: 1rem;
+    background-color: var(--react-color); 
+    height: 4rem; 
+    width: 20rem;
+    border: none; 
+    border-radius: 9rem;
+    text-align: center;
+}
+
+.location-button .button a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 540;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+.location-button .button a:hover {
+    font-size: 2.20rem;
+    transition: ease-in-out ;
+}
