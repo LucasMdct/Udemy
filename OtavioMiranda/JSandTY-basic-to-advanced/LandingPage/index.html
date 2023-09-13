@@ -19,13 +19,15 @@
 </head>
 
 <body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
             <h1 id="menu-logo">
                 <a href="#home">REACT</a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#intro">About</a></li>
                     <li><a href="#grid3">Functions</a></li>
@@ -117,13 +119,13 @@
                         Describing the UI /
                         Adding Interactivity and /
                         Managing State /
-                        Escape Hatches
+                        Escape Hatches</p>
                     <div class="location-button">
                         <div class="button">
                             <a href="https://react.dev/learn">Get Started</a>
                         </div>
                     </div>
-                    </p>
+                    
 
                 </article>
             </div>
@@ -136,25 +138,24 @@
             <p class="grid-description">A brief description</p>
             <div class="grid">
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-one.png" />
+                    <img src="./assets/img/gallery-one.png" alt="React logo versus the Android and Apple logo">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-two.png" />
+                    <img src="./assets/img/gallery-two.png" alt="There is a woman holding a laptop computer sitting on top of a pink square where there is a large cell phone next to her with the react symbol in pink and on the side leaning on the cell phone a man using a smartphone">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-three.png" />
+                    <img src="./assets/img/gallery-three.png" alt="blue react logo with a dark blue background, with a hand touching the index finger in the middle of the logo">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-four.jpeg" />
+                    <img src="./assets/img/gallery-four.jpeg" alt="fundo azul escuro com um circulo contendo um tipo de simbolo com a letra c no centro">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-five.jpeg" />
+                    <img src="./assets/img/gallery-five.jpeg" alt="imagens de 5 engrenagens de tamanhos diferentes">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/img/gallery-six.png" />
+                    <img src="./assets/img/gallery-six.png" alt="an image with a man looking at the react symbol with his hands facing him">
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -251,30 +252,22 @@
                 <h2>React</h2>
                 <p>The library for web and native user interfaces</p>
                 <p>Create user interfaces from components
-
-                    React lets you build user interfaces out of individual pieces called components. Create your own
-                    React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens,
-                    pages, and apps.
                 </p>
-            </div>
-            <div class="intro-img">
-                <img src="./assets/img/react.svg"
-                    alt="Um desenho de um homem segurando a logo do css e uma mulher empurrando a logo do javascript e um rapaz segurando a logo do html5">
             </div>
             <div class="contact-form">
                 <fieldset class="form-grid">
                     <legend>Contact Me</legend>
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="Your Name"/>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your Name">
                         </div>
                         <div class="form-group">
                         <label for="first-name">Last Name</label>
-                        <input type="text" name="last-name" id="last-name" placeholder="Your Last Name" />
+                        <input type="text" name="last-name" id="last-name" placeholder="Your Last Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Your Email" />
+                        <input type="text" name="email" id="email" placeholder="Your Email" >
                     </div>
                     <div class="form-group full-width">
                         <label for="message">Message</label>
@@ -289,6 +282,12 @@
         </div>
     </section>
 
+    <footer class="footer main-bg">
+        <p>
+            <a href="https://www.medeirosdev.cloud/">Feito com <span class="heart">♥</span> por Lucas Medeiros</a>
+        </p>
+    </footer>
+    <a class="back-to-top" href="#">➤</a>
 </body>
 
 </html>
