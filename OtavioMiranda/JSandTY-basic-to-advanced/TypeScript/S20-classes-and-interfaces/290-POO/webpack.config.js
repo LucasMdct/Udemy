@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './src/C00035-exercise-video/index.ts',
   module: {
     rules: [
       {
