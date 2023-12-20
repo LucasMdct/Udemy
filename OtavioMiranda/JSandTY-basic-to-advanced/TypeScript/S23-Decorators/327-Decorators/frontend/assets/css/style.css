@@ -1,0 +1,35 @@
+:root {
+  --dark-color: #111;
+  --light-color: #f3f3f3;
+  --medium-color: #bbb;
+  --border-color: #ddd;
+  --main-color: #0074D9;
+  --error-color: #FF4136;
+  --border-radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: sans-serif;
+  color: var(--dark-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: whitesmoke;
+}
+
