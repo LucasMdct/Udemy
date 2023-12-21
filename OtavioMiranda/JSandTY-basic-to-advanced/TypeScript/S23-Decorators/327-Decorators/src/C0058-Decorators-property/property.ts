@@ -1,3 +1,4 @@
+// property
 function newDecorator(classPrototype: any, name: string | symbol): any {
   let valueProperty: any;
   console.log(classPrototype);
