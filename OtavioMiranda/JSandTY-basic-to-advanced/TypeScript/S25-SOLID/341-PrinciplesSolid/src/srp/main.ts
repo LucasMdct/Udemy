@@ -9,12 +9,12 @@ import { Order } from './classes/order';
 import { Persistency } from './services/persistency';
 import { Product } from './classes/product';
 import { ShoppingCart } from './classes/shopping-cart';
-import { NoDiscount } from './classes/discount';
+import { TenPercenteDiscount } from './classes/discount';
 
 //const fiftyPercenteDiscount = new FiftyPercenteDiscount();
 //const teenPercenteDiscount = new TenPercenteDiscount();
-const noDiscount = new NoDiscount();
-const shpping = new ShoppingCart(noDiscount);
+const teenDiscount = new TenPercenteDiscount();
+const shpping = new ShoppingCart(teenDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
 const order = new Order(shpping, messaging, persistency);
