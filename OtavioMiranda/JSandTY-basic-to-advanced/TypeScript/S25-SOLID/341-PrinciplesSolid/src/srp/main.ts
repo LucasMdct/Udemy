@@ -1,10 +1,20 @@
-import { Messaging } from './messaging';
-import { Order } from './order';
-import { Persistency } from './persistency';
-import { Product } from './product';
-import { ShoppingCart } from './shopping-cart';
+/*
+OPEN/ CLOSED PRINCIPLE
+ENTITIES MUST BE OPEN FOR EXTENSION, BUT
+CLOSED FOR MODIFICATION
+*/
 
-const shpping = new ShoppingCart();
+import { Messaging } from './services/messaging';
+import { Order } from './classes/order';
+import { Persistency } from './services/persistency';
+import { Product } from './classes/product';
+import { ShoppingCart } from './classes/shopping-cart';
+import { NoDiscount } from './classes/discount';
+
+//const fiftyPercenteDiscount = new FiftyPercenteDiscount();
+//const teenPercenteDiscount = new TenPercenteDiscount();
+const noDiscount = new NoDiscount();
+const shpping = new ShoppingCart(noDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
 const order = new Order(shpping, messaging, persistency);
@@ -22,6 +32,7 @@ shpping.addItem({ name: 'GOLDS', price: 220.9 });
 
 console.log(shpping.items);
 console.log(shpping.total());
+console.log(shpping.totalDiscount());
 console.log(order.orderStatus);
 order.checkout();
 console.log(order.orderStatus);
