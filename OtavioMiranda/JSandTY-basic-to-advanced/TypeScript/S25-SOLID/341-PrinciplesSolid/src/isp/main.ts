@@ -9,6 +9,7 @@ import { Persistency } from './services/persistency';
 import { Product } from './classes/product';
 import { ShoppingCart } from './classes/shopping-cart';
 import { TenPercenteDiscount } from './classes/discount';
+import { EnterpriseCustomer, IndividualCustomer } from './classes/customer';
 
 //const fiftyPercenteDiscount = new FiftyPercenteDiscount();
 //const teenPercenteDiscount = new TenPercenteDiscount();
@@ -16,7 +17,18 @@ const teenDiscount = new TenPercenteDiscount();
 const shpping = new ShoppingCart(teenDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
-const order = new Order(shpping, messaging, persistency);
+const individualCustomer = new IndividualCustomer(
+  'Lucas',
+  'Medeiros',
+  '023.213.123-23',
+);
+const enterpiseCustomer = new EnterpriseCustomer(
+  'LM CALCADOS',
+  'Medeiros e cia ltda',
+  '023.223.234/0001/-32',
+);
+const order = new Order(shpping, messaging, persistency, enterpiseCustomer);
+console.log(individualCustomer);
 
 shpping.addItem(new Product('SILVER', 2000));
 shpping.addItem(new Product('RUBY', 2000));
