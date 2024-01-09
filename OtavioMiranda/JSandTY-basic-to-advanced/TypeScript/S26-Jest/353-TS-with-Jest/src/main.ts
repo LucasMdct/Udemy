@@ -16,13 +16,11 @@ import { Product } from './classes/product';
 import { ShoppingCart } from './classes/shopping-cart';
 import { TenPercenteDiscount } from './classes/discount';
 import { EnterpriseCustomer, IndividualCustomer } from './classes/customer';
-import { MessagingProtocol } from '../isp/classes/interfaces/messaging-protocol';
-
+import { MessagingProtocol } from './classes/interfaces/messaging-protocol';
 //const fiftyPercenteDiscount = new FiftyPercenteDiscount();
 //const teenPercenteDiscount = new TenPercenteDiscount();
 const teenDiscount = new TenPercenteDiscount();
 const shpping = new ShoppingCart(teenDiscount);
-const messaging = new Messaging();
 const persistency = new Persistency();
 const individualCustomer = new IndividualCustomer(
   'Lucas',
