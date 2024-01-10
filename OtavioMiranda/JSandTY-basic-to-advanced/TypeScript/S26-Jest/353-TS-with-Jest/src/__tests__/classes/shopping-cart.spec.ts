@@ -47,7 +47,7 @@ describe('ShoppingCart', () => {
   it('should test total and total with discount', () => {
     const { sut } = createSutWithProducts();
     expect(sut.total()).toBe(3.14);
-    expect(sut.totalDiscount()).toBe(3.14);
+    expect(sut.totalWithDicount()).toBe(3.14);
   });
 
   it('should and products and clear cart', () => {
@@ -70,14 +70,14 @@ describe('ShoppingCart', () => {
     const { sut, discountMock } = createSutWithProducts();
 
     const discountMockSpy = jest.spyOn(discountMock, 'calculate');
-    sut.totalDiscount();
+    sut.totalWithDicount();
     expect(discountMockSpy).toHaveBeenCalledTimes(1);
   });
   it('should call discount.calculate with totalPrice when totalDiscount is called', () => {
     const { sut, discountMock } = createSutWithProducts();
 
     const discountMockSpy = jest.spyOn(discountMock, 'calculate');
-    sut.totalDiscount();
+    sut.totalWithDicount();
     expect(discountMockSpy).toHaveBeenCalledWith(sut.total());
   });
 });

@@ -1,7 +1,8 @@
-import { Discount } from './discount';
 import { CartItem } from './interfaces/cart-item';
+import { Discount } from './discount';
+import { ShoppingCartProtocol } from './interfaces/shopping-cart-protocol';
 
-export class ShoppingCart {
+export class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: CartItem[] = [];
 
   constructor(private readonly discount: Discount) {}
@@ -24,7 +25,7 @@ export class ShoppingCart {
       .toFixed(2);
   }
 
-  totalDiscount(): number {
+  totalWithDicount(): number {
     return this.discount.calculate(this.total());
   }
 
@@ -33,7 +34,7 @@ export class ShoppingCart {
   }
 
   clear(): void {
-    console.log('Your cart has been successfully cleaned');
+    console.log('Carrinho de compras foi limpo...');
     this._items.length = 0;
   }
 }
