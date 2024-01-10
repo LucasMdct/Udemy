@@ -8,7 +8,7 @@ export abstract class Discount {
 }
 
 export class FiftyPercenteDiscount extends Discount {
-  protected readonly discount = 0.05;
+  protected readonly discount = 0.5;
 }
 
 export class TenPercenteDiscount extends Discount {

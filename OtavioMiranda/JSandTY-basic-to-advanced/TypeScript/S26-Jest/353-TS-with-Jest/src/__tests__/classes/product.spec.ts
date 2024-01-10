@@ -4,12 +4,12 @@ const createSut = (name: string, price: number): Product => {
   return new Product(name, price);
 };
 
-describe('Messaging', () => {
+describe('Product', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('should return undefined', () => {
+  it('should return properties name and price', () => {
     const sut = createSut('Camiseta', 49.9);
 
     expect(sut).toHaveProperty('name', 'Camiseta');
