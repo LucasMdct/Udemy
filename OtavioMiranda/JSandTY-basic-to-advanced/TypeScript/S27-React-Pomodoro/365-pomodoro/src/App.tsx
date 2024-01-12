@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Olá jovems.</p>
-        <PomodoroTimer defaultPomodoTime={2000} />
+        <PomodoroTimer defaultPomodoTime={3600} />
       </header>
     </div>
   );
